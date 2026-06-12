@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Oswald:wght@700&display=swap');
+body{
+  background-color:rgb(243, 231, 208);
+}
+h2{
+  font-family:bold serif;
+text-align: center;
+}
+label{
+    font-family: 'Courier Prime', Courier, monospace;
+    color:rgb(161, 112, 5);
+    word-spacing:2px;
+    letter-spacing: 2px;
+    font-size:15px;
+      
+}
+
+.aboutme{
+     width: 400px;
+  height: 160px;
+  padding: 20px;
+  
+   
+}
+
+.boxx{
+  align-items:center;
+  border: 1px solid ;
+  border-radius: 10px;
+  border-color: palevioletred;
+  margin: 0;
+
+  display:flex;
+  align-items: center;
+  padding: 20px;
+  height: 600px;
+  width:1500px;
+  margin: 20px;
+}
+
+.box2{
+  border:1px solid #9999;
+  border-radius:20px;
+  background-color: rgb(247, 247, 151);
+  height:500px ;
+  width:800px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.box3{
+  border:1px solid #9999;
+  border-radius:20px;
+  background-color:rgb(186, 186, 240);
+  height:380px ;
+  width:510px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  margin:auto;
+  padding-left:40px;
+   position: relative;
+   flex-direction: column;
+  }
+
+
+.photo-box{
+  margin: 0;
+  width:170px;
+  height: 200px;
+  border:2px dotted #0e0c0c99;
+  border-radius:5px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-family:"Comic Sans MS",cursive;
+  color:#4444;
+}
+.info{
+  position: absolute;
+    
+    top: 30px;
+    left: 260px;
+    right: 20px;
+}
+h3{
+  font-family: 'Special Elite', cursive;
+  font-size:12px ;
+  letter-spacing:2px;
+  left: 12rem;
+  top:2rem;
+  right: 0;
+  margin: 0;
+  text-align: center;
+}
+.tickno{
+  font-family: 'Oswald', sans-serif;
+font-weight: 700;
+text-align: center;
+font-size: 15px;
+margin-top:5px;
+}
+.NAME{
+  font-family: 'Special Elite', cursive;
+  font-size:11px ;
+  color:black;
+  letter-spacing:1px;
+  padding-right: 10px;
+   margin-bottom: 15px;
+}
+.dots{
+  letter-spacing:2px;
+}
+.dob{
+   font-family: 'Special Elite', cursive;
+  font-size:11px ;
+  color:black;
+  letter-spacing:1px;
+  padding-right: 10px;
+  margin-bottom: 15px;
+
+}
+.placeofissue{
+   font-family: 'Special Elite', cursive;
+  font-size:11px ;
+  color:black;
+  letter-spacing:1px;
+  padding-right: 10px;
+  margin-bottom: 15px;
+
+}
+.dateofissue{
+   font-family: 'Special Elite', cursive;
+  font-size:11px ;
+  color:black;
+  letter-spacing:1px;
+  padding-right: 10px;
+
+}
+.line1 {
+   font-family: 'Special Elite', cursive;
+  font-size:12px ;
+  letter-spacing:2px;
+  left: 12rem;
+  top:2rem;
+  right: 0;
+  margin: 0;
+  text-align: center;
+
+}
+.para1{
+  font-size: 10px;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+letter-spacing:0.5px;
+}
+.para2{
+  font-size: 10px;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+letter-spacing:0.5px;
+line-height: 1.4;
+
+}
+.sign{
+  font-size: 10px;
+  font-family: 'Special Elite', cursive ,bold;
+  text-align: center;
+letter-spacing:0.5px;
+font-weight: bold;
+margin-top: 26px;
+
+}
+.stamp {
+     position: absolute;
+    bottom:80px;
+    left: 280px;
+    color:black;
+    font-size: 28px;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+    border: 6px solid black;
+    border-radius: 50%;
+    padding: 10px 20px;
+    text-align: center;
+    opacity: 0.5;
+    transform: rotate(-15deg);
+    letter-spacing: 2px;
+}
