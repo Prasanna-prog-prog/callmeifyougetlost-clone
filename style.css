@@ -188,3 +188,153 @@ margin-top: 26px;
     transform: rotate(-15deg);
     letter-spacing: 2px;
 }
+
+.details{
+ 
+  
+  border:2px solid sandybrown;
+  border-radius: 10px;
+  height: 750px;
+  width: 400px;
+ margin-right: 100px;
+}
+
+h4{
+  text-align: center;
+  font-size: 1rem;
+  margin-right:270px;
+}
+.button-group{
+  align-items:center;
+  display:flex;
+  gap: 10px;
+}
+.but1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:10px;
+  border-radius:25px;
+margin-left: 10px;
+  border:2px solid #b5a06e;
+  color: #5c3d1e;
+  cursor: pointer;
+}
+.but2{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:10px;
+  border-radius:25px;
+ 
+  border:2px solid #b5a06e;
+  color: #5c3d1e;
+}
+.label{
+  display:block;
+  margin-left:18px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  color:black;
+ margin-top:17px;
+}
+.text{
+   margin-left:25px;
+height:45px;
+width:320px;
+border-radius:12px;
+border:2px solid #b5a06e;
+}
+.BB{
+  border-radius:12px;
+border:2px solid #b5a06e;
+height:90px;
+width:320px;
+ margin-left:25px;
+ text-align: center;
+ margin-top: 10px;
+
+}
+.sign-top{
+  display:flex;
+  gap: 20px;
+}
+.but3{
+ display: flex;
+  align-items: center;
+  justify-content: center;
+ border:2px solid #b5a06e;
+  color: #5c3d1e;
+ width:80px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.color-options{
+  display:flex;
+   gap: 15px;
+  margin: auto 0;
+  margin-top: 20px;
+}
+.color-btn{
+  height:50px;
+  width:60px;
+  padding: 5px;
+  display:flex;
+  flex-direction: column;
+  border:2px solid #b5a06e;
+  gap:9px;
+  align-items: center;margin-left: 15px;
+  border-radius: 15px;
+}
+.color1 { background-color: #f5c842; }
+.color2 { background-color: #4ec9d4; }
+.color3 { background-color: #3ecf8e; }
+.color4 { background-color: #f5a7b8; }
+
+.color1 ,.color2,.color3,.color4{
+  height:20px;
+  width:20px;
+  border-radius: 60px;
+  border:none;
+}
+
+.but4{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  width:350px;
+  height: 40px;
+  margin-left:19px;
+  margin-top: 20px;
+
+  border-radius: 20px;
+  background-color: #4ec9d4;
+  color: white;
+  border:none;
+  font-size:16px;
+  font-family: 'Oswald', sans-serif ;
+  letter-spacing: 2px;
+}
+
+.but5{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  width:350px;
+  height: 40px;
+  margin-left:19px;
+  margin-top: 20px;
+
+  border-radius: 20px;
+  background-color: whitesmoke;
+  color:  #5c3d1e;
+  border:1px solid black;
+  font-size:16px;
+  font-family: 'Oswald', sans-serif ;
+  letter-spacing: 2px;
+}
