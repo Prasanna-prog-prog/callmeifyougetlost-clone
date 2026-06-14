@@ -4,7 +4,8 @@
         <title>ID GENERATOR</title>
 
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       
         </head>
 
         <body>
@@ -14,8 +15,7 @@
 
            <section class="boxx">
 
-           
-           <div class="box2">
+            <div class="box2">
   
             <div class="box3">
 
@@ -42,10 +42,11 @@
                 <div class="info">
                     <h3>PERMENANT LICENSE OF TRAVEL</h3>
                     <p class="tickno">NO.TTC6252021</p>
-                   <p class="NAME">Issued to <span class="dots">................................</span></p>
-                   <p class="dob">Date of Birth <span class="dots">...........................</span></p>
-                   <p class="placeofissue">Place Of Issue <span class="dots">...........................</span></p>
-                <p class="dateofissue">Date Of Issue <span class="dots">...........................</span></p>
+
+                <p class="field">Issued to<span class="dots">................................<span class="value1" id="cardName">Name</span></p>
+                <p class="dod">Date of Birth<span class="dots">...........................<span class="value2" id="cardbirth">DateOfBirth</span></p>
+                <p class="placeofissue">Place Of Issue <span class="dots">...........................<span class="value3" id="cardloc">Location</span></span></p>
+                <p class="dateofissue">Date Of Issue <span class="dots">...........................<span class="value2">06/14/2026</span></span></p>
 
                 <h3 class="line1">LICENSE OF TRAVEL</h3>
                 <p class="para1">This is to Certify that the person named and <br> 
@@ -61,28 +62,34 @@
 
 
                  <div class="stamp">CALL ME IF<br> YOU GET LOST</div>
-                <p class="photo-box">submit photo</p>
-            </div>
+
+                <div class="photo-box-holder">
+                <p class="photo-box" id="photoPlaceholder">submit photo</p>
+                <img id="cardPhoto" src="" style="display: none; width:100%;height:100% ;object-fit: cover;">
                 </div>
 
-                <div class="details">
+          </div>
+         </div>
+
+<input type="file" id="fileInput" accept="image/*" style="display:none">
+            <div class="details">
             <h4>POTRAIT</h4>
 
             <div class="button-group">
-            <button class="but1"><span class="material-icons">add_photo_alternate</span>Upload Photo</button>
+            <button class="but1" id="uploadBtn"><span class="material-icons">add_photo_alternate</span>Upload Photo</button>
             <button class="but2"><span class="material-icons">delete</span>Delete</button>
            </div>
    
            <label class="label">Name</label>
-           <input class="text" placeholder="Name"></input>
+           <input class="text" placeholder="Name" id="nameInput"></input>
 
 
              <label class="label">Date Of Birth</label>
-           <input class="text" placeholder="mm/dd/yyyy"></input>
+           <input class="text" placeholder="mm/dd/yyyy" id="birth"></input>
 
 
              <label class="label">LOCATION</label>
-           <input class="text" placeholder="LOCATION"></input>
+           <input class="text" placeholder="LOCATION" id="loc"></input>
 
            <div class="sign-container">
             <div class="sign-top">
@@ -129,18 +136,9 @@
       <button class="but5"><span class="material-icons">restart_alt</span>RESET ALL</button>
      
 
-          </section>
-                
 
 
-
-        <section class="aboutme">
-            <p id="Personname"></p>
-            <p id="age"></p>
-            <p id="city"></p>
-            <p id="hobbies"></p>
-
-            <button onclick="increaseAge()">click me</button>
+       
         </section>
 
 
