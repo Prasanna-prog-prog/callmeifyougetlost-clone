@@ -17,7 +17,7 @@
 
             <div class="box2">
   
-            <div class="box3">
+            <div class="box3" id="card">
 
              <div style="position:absolute; top:10px; left:0; right:0; text-align:center; letter-spacing:17px">
                 ★★★★★★★★★★★★★★★★★
@@ -63,32 +63,34 @@
 
                  <div class="stamp">CALL ME IF<br> YOU GET LOST</div>
 
-                <div class="photo-box-holder">
-                <p class="photo-box" id="photoPlaceholder">submit photo</p>
-                <img id="cardPhoto" src="" style="display: none; width:100%;height:100% ;object-fit: cover;">
-                </div>
+                  <div class="photo-box">
+                  <p id="Placeholder">submit photo</p>
+                  <img id="previewImg" src="" alt="">
+                  </div>
+                  <input type="file" id="PhotoInput" accept="image/*" hidden>
 
           </div>
          </div>
-
-<input type="file" id="fileInput" accept="image/*" style="display:none">
+   
+            
             <div class="details">
             <h4>POTRAIT</h4>
 
             <div class="button-group">
-            <button class="but1" id="uploadBtn"><span class="material-icons">add_photo_alternate</span>Upload Photo</button>
-            <button class="but2"><span class="material-icons">delete</span>Delete</button>
+           <button class="but1" id="uploadBtn"><span class="material-icons">add_photo_alternate</span>Upload Photo</button>
+            <button class="but2" id="deleteBtn"><span class="material-icons">delete</span>Delete</button>
            </div>
+      
+
+
    
            <label class="label">Name</label>
            <input class="text" placeholder="Name" id="nameInput"></input>
 
-
-             <label class="label">Date Of Birth</label>
+           <label class="label">Date Of Birth</label>
            <input class="text" placeholder="mm/dd/yyyy" id="birth"></input>
 
-
-             <label class="label">LOCATION</label>
+           <label class="label">LOCATION</label>
            <input class="text" placeholder="LOCATION" id="loc"></input>
 
            <div class="sign-container">
@@ -106,25 +108,22 @@
             <div class="color-options">
 
             <div class="color-btn">
-            <button class="color1"></button>
+            <button class="color1" data-color="#f5c842"></button>
             <span>YELLOW</span>
-        </div>
+            </div>
         
-
-        <div class="color-btn">
-            <button class="color2"></button>
+            <div class="color-btn" >
+            <button class="color2" data-color="#4ec9d4"></button>
             <span>BLUE</span>
-        </div>
+            </div>
 
-
-        <div class="color-btn">
-            <button class="color3"></button>
+            <div class="color-btn">
+            <button class="color3" data-color="#3ecf8e"></button>
             <span>MINT</span>
-        </div>
+            </div>
 
-
-        <div class="color-btn">
-            <button class="color4"></button>
+             <div class="color-btn">
+            <button class="color4" data-color="#f5a7b8"></button>
             <span>PINK</span>
         </div>
       </div>
@@ -145,7 +144,6 @@
         
         </section>
         <script src="variables.js"></script>
-<button>GENERATE CARD</button>
         </body>
 
 
