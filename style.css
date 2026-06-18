@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Oswald:wght@700&display=swap');
 body{
@@ -82,7 +83,21 @@ label{
   justify-content: center;
   font-family:"Comic Sans MS",cursive;
   color:#4444;
- 
+   overflow:hidden;
+    position:relative;
+   /* add this */
+}
+
+#previewImg {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
+}
+
+#Placeholder {
+   position:absolute;
+  z-index: 1;
 }
 
 .info{
@@ -267,7 +282,7 @@ margin-left: 10px;
   justify-content: center;
   padding:10px;
   border-radius:25px;
- 
+   cursor: pointer;
   border:2px solid #b5a06e;
   color: #5c3d1e;
 }
@@ -316,7 +331,14 @@ width:320px;
   display:flex;
    gap: 15px;
   margin: auto 0;
-  margin-top: 20px;
+  margin-top: 20px;}
+  .color-options button{
+    width:27px;
+height: 27px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 .color-btn{
   height:50px;
@@ -329,6 +351,11 @@ width:320px;
   align-items: center;margin-left: 15px;
   border-radius: 15px;
 }
+.color-options button.active {
+    border: 3px solid #333;       /* dark outline when selected */
+    transform: scale(1.2);        /* slightly bigger */
+}
+
 .color1 { background-color: #f5c842; }
 .color2 { background-color: #4ec9d4; }
 .color3 { background-color: #3ecf8e; }
@@ -387,4 +414,3 @@ width:320px;
     vertical-align: middle;
 
 }
-
