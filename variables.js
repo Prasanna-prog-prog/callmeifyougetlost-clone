@@ -1,23 +1,22 @@
-
 let nameInput = document.getElementById("nameInput");//this is the box of name in potrait
 let cardName = document.getElementById("cardName");//this is name in the card 
 
 nameInput.addEventListener("input" , function(){//when the name iswritten by the user in the box
- cardName.textContent = nameInput.value;// using the textContent it written visible inside in name in the card.
+ cardName.textContent = nameInput.value || "Name";// using the textContent it written visible inside in name in the card.
 });
 
 let birth = document.getElementById("birth");
 let cardbirth = document.getElementById("cardbirth");
 
 birth.addEventListener("input" , function(){
- cardbirth.textContent = birth.value;
+ cardbirth.textContent = birth.value ||"DateOfBirth";
 });
 
 let loc = document.getElementById("loc");
 let cardloc= document.getElementById("cardloc");
 
 loc.addEventListener("input" , function(){
- cardloc.textContent = loc.value;
+ cardloc.textContent = loc.value || "Location";
 });
 
 
@@ -83,6 +82,71 @@ colorButtons.forEach(button =>{
         button.classList.add('active');
     })
 });
+
+//signature concept is called CANVAS API
+const canvas = document.getElementById("drawCanvas");
+const ctx = canvas.getContext('2d');
+ 
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+
+canvas.addEventListener('mousedown',startDrawing);
+canvas.addEventListener('mousemove',draw);
+canvas.addEventListener('mouseup',stopDrawing);
+canvas.addEventListener('mouseleave',stopDrawing);
+
+canvas.addEventListener('touchstart',startDrawing);
+canvas.addEventListener('touchmove',draw);
+canvas.addEventListener('touchend',stopDrawing);
+canvas.addEventListener('touchcancel',stopDrawing);
+
+function startDrawing(e){
+    e.preventDefault();
+    isDrawing = true;
+
+    const pos = getPosition(e);
+    lastX = pos.x;
+    lastY = pos.y;
+}
+
+function getPosition(e){
+    const rect = canvas.getBoundingClientRect();
+
+    if (e.touches){
+        return{
+        x:e.touches[0].clientX - rect.left,
+        y:e.touches[0].clientY - rect.top
+        };
+    }else{
+        return{
+            x:e.clientX - rect.left,
+            y:e.clientY - rect.top,
+
+        };
+    }
+
+    }
+    function draw(e){
+        e.preventDefault();
+        if(!isDrawing)return;
+        const pos = getPosition(e);
+
+        ctx.beginPath();
+        ctx.moveTo(lastX,lastY);
+        ctx.lineTo(pos.x,pos.y);
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.lineCap = 'round';
+        ctx.lineJoin='round';
+        ctx.stroke();
+        lastX=pos.x;
+        lastY = pos.y;
+    }
+    function stopDrawing(){
+        isDrawing = false;
+
+    }
 
 
 
