@@ -1,4 +1,6 @@
-let nameInput = document.getElementById("nameInput");//this is the box of name in potrait
+
+
+    let nameInput = document.getElementById("nameInput");//this is the box of name in potrait
 let cardName = document.getElementById("cardName");//this is name in the card 
 
 nameInput.addEventListener("input" , function(){//when the name iswritten by the user in the box
@@ -86,6 +88,9 @@ colorButtons.forEach(button =>{
 //signature concept is called CANVAS API
 const canvas = document.getElementById("drawCanvas");
 const ctx = canvas.getContext('2d');
+
+const  previewCanvas = document.getElementById('previewCanvas');
+const previewCtx = previewCanvas.getContext('2d');
  
 let isDrawing = false;
 let lastX = 0;
@@ -101,6 +106,13 @@ canvas.addEventListener('touchmove',draw);
 canvas.addEventListener('touchend',stopDrawing);
 canvas.addEventListener('touchcancel',stopDrawing);
 
+document.querySelector('.but3').addEventListener("click" , ()=>{
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  previewCtx.clearRect(0,0,previewCanvas.width,previewCanvas.height);
+  
+});
+
 function startDrawing(e){
     e.preventDefault();
     isDrawing = true;
@@ -111,7 +123,7 @@ function startDrawing(e){
 }
 
 function getPosition(e){
-    const rect = canvas.getBoundingClientRect();
+const rect = canvas.getBoundingClientRect();
 
     if (e.touches){
         return{
@@ -136,10 +148,23 @@ function getPosition(e){
         ctx.moveTo(lastX,lastY);
         ctx.lineTo(pos.x,pos.y);
         ctx.strokeStyle = '#000000';
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 3;
         ctx.lineCap = 'round';
         ctx.lineJoin='round';
         ctx.stroke();
+
+        const scaleX = previewCanvas.width/canvas.width;
+        const scaleY = previewCanvas.height/canvas.height;
+
+        previewCtx.beginPath();
+        previewCtx.moveTo(lastX * scaleX , lastY*scaleY);
+        previewCtx.lineTo(pos.x * scaleX , pos.y * scaleY);
+        previewCtx.strokeStyle = '#000000';
+        previewCtx.lineWidth=3;
+        previewCtx.lineCap = 'round';
+        previewCtx.lineJoin = 'round';
+        previewCtx.stroke();
+
         lastX=pos.x;
         lastY = pos.y;
     }
@@ -147,6 +172,44 @@ function getPosition(e){
         isDrawing = false;
 
     }
+
+//ITS ABOUT DOWNLOADING THE CARD USING THE html2
+
+document.querySelector('.but4').addEventListener('click',()=>{
+    const card = document.getElementById('card');
+
+    html2canvas(card , {
+        scale:2,
+        useCORS:true
+    }).then((canvas)=>{
+        const link = document.createElement('a');
+        link.download = 'my-travel-id.png';
+        link.href=canvas.toDataURL('image/png');
+        link.click();
+    });
+});
+
+//RESET BUTTON
+document.getElementById('clearBtn').addEventListener('click',()=>{
+
+    //clear signature canvases
+     ctx.clearRect(0,0,canvas.width,canvas.height);
+     previewCtx.clearRect(0,0,previewCanvas.width,previewCanvas.height);
+
+     //reset all input fields
+     document.getElementById('cardName').textContent='Name';
+     document.getElementById('cardbirth').textContent='DateOfBirth';
+     document.getElementById('cardloc').textContent='Location';
+
+     //rest all input boxes on right side
+     document.querySelector('input[placeholder="Name"]').value='';
+     document.querySelector('input[placeholder="mm/dd/yyyy"]').value='';
+     document.querySelector('input[placeholder="Location"]').value='';
+
+  
+
+    
+});
 
 
 
