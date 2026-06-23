@@ -5,7 +5,7 @@
 
         <link rel="stylesheet" href="style.css">
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-       
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
         </head>
 
         <body>
@@ -57,8 +57,13 @@
                 and arranged all songs within the attached<br> 
                record, unless stated otherwise.</p>
 
-               <p class="sign">sign here  ........................................</p>
-               <canvas id="previewCanvas" class="sign"></canvas>
+              
+               <div class="sign-area">
+                  <canvas id="previewCanvas" class="sign" width="200" height="40"></canvas>
+                <p class="sign-label">sign here.............................</p>
+              
+            </div>
+               
                  </div>
 
 
@@ -97,7 +102,9 @@
            <div class="sign-container">
             <div class="sign-top">
            <label class="label">HAND WRITTEN SIGNATURE</label>
-            <button class="but3"><span class="material-icons">delete</span>clear</button>
+
+      
+            <button class="but3" ><span class="material-icons">delete</span>clear</button>
             </div>
            <canvas id="drawCanvas" class="BB"  width="320" height="90"></canvas>
           </div>
